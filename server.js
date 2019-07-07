@@ -19,6 +19,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const router = require("./controllers/burgers_controller");
+
 app.use(router);
 
 db.sequelize.sync({ force: true }).then(function () {
